@@ -3,13 +3,13 @@ from pathlib import Path
 
 init(autoreset=True)
 
-# print(Style.BRIGHT + "Hello world!" + Style.RESET_ALL)
-# print(Fore.GREEN + "Hello world!")
-# print(Back.RED + "Hello world!")
-# print(Fore.GREEN + "Hello world!")
+# print(Style.BRIGHT + "!!!" + Style.RESET_ALL)
+# print(Fore.GREEN + "!!!")
+# print(Back.RED + "!!!")
+# print(Fore.GREEN + "!!!")
 
 # Створення об'єкту Path для директорії
-directory = Path("C:\\Python_Test")
+directory = Path("C:\SynologyDrive\Work\DALI")
 level = 0
 
 def print_tree(directory):
@@ -20,7 +20,7 @@ def print_tree(directory):
         print("\u2523" if path.is_dir() else "\u2503", "\u2501"*level*4 if path.is_dir() else " "*level*4, Fore.RED + "Folder: " if path.is_dir() else Fore.GREEN + "File: ", path.name)
         if path.is_dir():
             level += 1
-            print("\u2503", " " * level * 4, end = '')
+            # print("\u2503", " " * level * 4, end = '')
             print_tree(path)
             level -= 1
     return None

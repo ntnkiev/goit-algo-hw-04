@@ -1,4 +1,4 @@
-def load_data(filename: str) -> list[str]:
+def load_data(filename: str) -> list[str]: #читання файлу
     try:
         with open(filename, "r") as file:
             return file.readlines()
@@ -6,7 +6,7 @@ def load_data(filename: str) -> list[str]:
         print('File not found')
         exit()
 
-def clean_data(salaries_list: list[str]) -> list[float]:
+def clean_data(salaries_list: list[str]) -> list[float]: #створення списку зарплат
     clean_list = []
     for sol in salaries_list:
         clean_list.append(float(sol.split(',')[1].strip()))
