@@ -1,9 +1,11 @@
 from data import load_data
-from make_dict import make_dict
+from make_dict import split_list, strip_array, make_dict
 
 def get_cats_info(filename: str) -> list:
     raw_data = load_data(filename) # читання файлу
-    return make_dict(raw_data) # 
+    splitted_data = split_list(raw_data)
+    stripped_data = strip_array(splitted_data)
+    return make_dict(stripped_data) # 
 
 def main():
     cats_info = get_cats_info("hw4_2\\cats_file.txt")
